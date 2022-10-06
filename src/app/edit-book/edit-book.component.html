@@ -1,0 +1,15 @@
+<p>edit-book works!</p>
+<a>book title </a>
+<input [(ngModel)]="book.bookTitle">
+<br/>
+<br/>
+<a>author </a>
+<input [(ngModel)]="book.author">
+<br/>
+<br/>
+<a>published year </a>
+<input required maxlength="4" [(ngModel)]="book.publishedYear">
+<br/>
+<br/>
+<button type="button" [disabled]="(book.bookTitle=='')||(book.author=='')||(book.publishedYear=='')" (click)="onSaveBook()">save</button>
+<button type="button" (click)="onGoBack()">go back</button>

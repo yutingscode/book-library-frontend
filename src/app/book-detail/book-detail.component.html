@@ -1,0 +1,23 @@
+<div *ngIf="book">
+  <h2>book details</h2>
+  <a>book title </a>
+  <span>{{book.bookTitle}}</span>
+  <br/>
+  <br/>
+  <a>author </a>
+  <span>{{book.author}}</span>
+  <br/>
+  <br/>
+  <a>published year </a>
+  <span>{{book.publishedYear}}</span>
+  <br/>
+  <br/>
+  <a>isbn </a>
+  <span>{{book.isbn}}</span>
+  <br/>
+  <button type="button" (click)="onDeleteBook()">delete</button>
+  <button type="button" (click)="onEditBook()">edit</button>
+  <button type="button" (click)="onGoBack()">go back</button>
+  </div>
+
+  <img [src]="book.image"/>

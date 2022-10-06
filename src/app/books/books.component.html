@@ -1,0 +1,7 @@
+<ul class="heroes">
+    <li *ngFor="let book of books">
+      <a routerLink="/detail/{{book.isbn}}">
+        <span class="badge"> {{book.bookTitle}}</span>
+      </a>
+  </li>
+</ul>
