@@ -1,15 +1,19 @@
-<p>edit-book works!</p>
+<mat-card class = "mat-card-container">
 <a>book title </a>
+<br/>
 <input [(ngModel)]="book.bookTitle">
 <br/>
 <br/>
 <a>author </a>
+<br/>
 <input [(ngModel)]="book.author">
 <br/>
 <br/>
 <a>published year </a>
+<br/>
 <input required maxlength="4" [(ngModel)]="book.publishedYear">
 <br/>
 <br/>
-<button type="button" [disabled]="(book.bookTitle=='')||(book.author=='')||(book.publishedYear=='')" (click)="onSaveBook()">save</button>
-<button type="button" (click)="onGoBack()">go back</button>
+<button mat-button color="primary" [disabled]="(book.bookTitle=='')||(book.author=='')||(book.publishedYear=='')" (click)="onSaveBook()">save</button>
+<button mat-button color="primary" (click)="onGoBack()">go back</button>
+</mat-card>
