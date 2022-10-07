@@ -1,0 +1,10 @@
+.mat-card-container {
+    display: block; 
+    height: 350px;
+    width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    background-color:beige;
+    font-weight: bold;
+}

@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Book } from '../book';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { catchError } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
 export class BookService {
@@ -11,18 +10,8 @@ export class BookService {
 
   private booksUrl = 'http://localhost:8080/books';  
 
-  private handleError<T>(operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
-      console.error(error); // log to console instead
-      return of(result as T);
-    };
-  }
-
   getBooks(): Observable<any> {
     return this.http.get<any>(this.booksUrl) 
-    .pipe(
-      catchError(this.handleError<Book[]>('getBooks', []))
-    );
   }
 
   getBook(isbn: string): Observable<any> {
@@ -40,5 +29,4 @@ export class BookService {
   editBook(book: Book): Observable<Book> {
     return this.http.put<Book>(this.booksUrl+'/'+book.isbn, book);
   }
-  
 }

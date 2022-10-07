@@ -19,7 +19,6 @@ export class EditBookComponent implements OnInit {
     image: ""
   };
   
-
   constructor(private route: ActivatedRoute, private router: Router, private bookService: BookService, private location: Location) { }
 
   ngOnInit(): void {
@@ -32,9 +31,7 @@ export class EditBookComponent implements OnInit {
       .subscribe(book => this.book =book);
   }
 
-
   onSaveBook() {
-
     var regex = /^\d+$/;
     if(!regex.test(this.book.publishedYear)) {
       alert('Invalid published year input. Please redo.');

@@ -1,7 +1,3 @@
-<h2>Top Heroes</h2>
-<div class="heroes-menu">
-  <a *ngFor="let book of books"
-  routerLink="/detail/{{book.isbn}}">
-  {{book.bookTitle}}
-</a>
-</div>
+<mat-card class="mat-card-container" *ngFor="let book of books" routerLink="/detail/{{book.isbn}}"> -->
+  <img mat-card-image class="mat-card-image-container" [src]="book.image"/>
+</mat-card>

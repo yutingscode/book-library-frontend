@@ -1,9 +1,9 @@
-<h1>{{title}}</h1>
-<nav>
-    <a routerLink="/dashboard">Dashboard</a>
-    <br/>
-    <a routerLink="/books">Books</a>
-    <br/>
-    <a routerLink="/addBook">Add a book</a>
-</nav>
+<mat-toolbar>
+    <h1>{{title}}</h1>
+</mat-toolbar>
+<div>
+    <button mat-button color="primary" routerLink="/dashboard">Dashboard</button>
+    <button mat-button color="primary" routerLink="/books">Book list</button>
+    <button mat-button color="primary" routerLink="/addBook">Add a book</button>
+</div>
 <router-outlet></router-outlet>

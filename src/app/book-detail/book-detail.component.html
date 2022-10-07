@@ -1,23 +1,28 @@
-<div *ngIf="book">
-  <h2>book details</h2>
-  <a>book title </a>
+<mat-card class = "mat-card-container">
+  <h2>book details:</h2>
+  <div *ngIf="book">
+  <a>book title:</a>
   <span>{{book.bookTitle}}</span>
   <br/>
   <br/>
-  <a>author </a>
+  <a>author:</a>
   <span>{{book.author}}</span>
   <br/>
   <br/>
-  <a>published year </a>
+  <a>published year:</a>
   <span>{{book.publishedYear}}</span>
   <br/>
   <br/>
-  <a>isbn </a>
+  <a>isbn:</a>
   <span>{{book.isbn}}</span>
   <br/>
-  <button type="button" (click)="onDeleteBook()">delete</button>
-  <button type="button" (click)="onEditBook()">edit</button>
-  <button type="button" (click)="onGoBack()">go back</button>
-  </div>
-
+  <br/>
   <img [src]="book.image"/>
+  <br/>
+  </div>
+  <button mat-button color="primary" (click)="onDeleteBook()">delete</button>
+  <button mat-button color="primary" (click)="onEditBook()">edit</button>
+  <button mat-button color="primary" (click)="onGoBack()">go back</button>
+</mat-card>
+
+

@@ -1,0 +1,14 @@
+.mat-card-container {
+    display: block; 
+    height: 750px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    background-color: antiquewhite;
+    font-weight: bold;
+  }
+
+  .mat-card-button-container {
+    display: block; 
+  }

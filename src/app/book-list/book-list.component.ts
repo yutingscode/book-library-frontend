@@ -3,11 +3,11 @@ import { Book } from '../book';
 import { BookService } from '../service/book.service';
 
 @Component({
-  selector: 'app-books',
-  templateUrl: './books.component.html',
-  styleUrls: ['./books.component.css']
+  selector: 'app-book-list',
+  templateUrl: './book-list.component.html',
+  styleUrls: ['./book-list.component.css']
 })
-export class BooksComponent implements OnInit {
+export class BookListComponent implements OnInit {
 
   selectedBook?: Book;
   books: Book[] = [];

@@ -2,10 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { BookService } from '../service/book.service';
 import { Router } from '@angular/router';
 
-// class ImageSnippet {
-//   constructor(public src: string, public file: File) {}
-// }
-
 @Component({
   selector: 'app-add-book',
   templateUrl: './add-book.component.html',
@@ -50,8 +46,6 @@ export class AddBookComponent implements OnInit {
       return;
     }
 
-    // const uploadImage = new FormData();
-    // uploadImage.append('bookImage', this.selectedFile, this.selectedFile.name);
     this.bookService.addBook(newBook).subscribe({
         complete: () => { 
           this.router.navigate(['/books']);
@@ -66,6 +60,7 @@ export class AddBookComponent implements OnInit {
     reader.readAsDataURL(this.selectedFile);
     reader.onload = () => {
       this.image = reader.result;
+      console.log(this.image);
     };
   }
 }

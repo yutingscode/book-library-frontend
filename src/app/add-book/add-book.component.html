@@ -1,22 +1,25 @@
-<p>add-book works!</p>
-<a>book title </a>
-<input [(ngModel)]="bookTitle" placeholder="book title">
-<br/>
-<br/>
-<a>author </a>
-<input [(ngModel)]="author" placeholder="author">
-<br/>
-<br/>
-<a>published year </a>
-<input [(ngModel)]="publishedYear" required maxlength="4" placeholder="published year">
-<br/>
-<br/>
-<a>isbn </a>
-<input [(ngModel)]="isbn" placeholder="isbn">
-<br/>
-<br/>
-<input type="file" accept=".jpg" (change)="onFileChanged($event)">
-
-<button [disabled]="(bookTitle=='')||(author=='')||(publishedYear=='')||(isbn=='')" (click)="onAddBook()">submit</button>
-
-
+<mat-card class="mat-card-container">
+    <a>book title </a>
+    <br/>
+    <input [(ngModel)]="bookTitle" placeholder="book title">
+    <br/>
+    <br/>
+    <a>author </a>
+    <br/>
+    <input [(ngModel)]="author" placeholder="author">
+    <br/>
+    <br/>
+    <a>published year </a>
+    <br/>
+    <input [(ngModel)]="publishedYear" required maxlength="4" placeholder="published year">
+    <br/>
+    <br/>
+    <a>isbn </a>
+    <br/>
+    <input [(ngModel)]="isbn" placeholder="isbn">
+    <br/>
+    <br/>
+    <input type="file" accept=".jpg" (change)="onFileChanged($event)">
+    
+    <button [disabled]="(bookTitle=='')||(author=='')||(publishedYear=='')||(isbn=='')" (click)="onAddBook()">submit</button>    
+</mat-card>

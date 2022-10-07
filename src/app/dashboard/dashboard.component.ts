@@ -23,8 +23,6 @@ export class DashboardComponent implements OnInit {
         (books) => {
         if(books._embedded) {
           this.books=books._embedded.booksList}
-        }
-          );
+        });
   }
-
 }
