@@ -18,7 +18,9 @@ export class EditBookComponent implements OnInit {
     publishedYear: "",
     image: ""
   };
-  
+
+  selectedFile: any;
+
   constructor(private route: ActivatedRoute, private router: Router, private bookService: BookService, private location: Location) { }
 
   ngOnInit(): void {
@@ -49,5 +51,15 @@ export class EditBookComponent implements OnInit {
 
   onGoBack() {
     this.location.back();
+  }
+
+  onFileChanged(event: any): void {
+    this.selectedFile = event.target.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(this.selectedFile);
+    reader.onload = () => {
+      this.book.image = reader.result;
+      console.log(this.book.image);
+    };
   }
 }

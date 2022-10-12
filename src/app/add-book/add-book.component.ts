@@ -60,7 +60,6 @@ export class AddBookComponent implements OnInit {
     reader.readAsDataURL(this.selectedFile);
     reader.onload = () => {
       this.image = reader.result;
-      console.log(this.image);
     };
   }
 }
