@@ -24,4 +24,4 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ## Further help
 
-![Alt text](C:\Users\ZhuZhu\Desktop\githubSnaps\dashboard)
+![dashboard](https://user-images.githubusercontent.com/98000755/195696661-560d5251-51ac-4b1c-be79-1c405865e82c.PNG)
